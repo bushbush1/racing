@@ -3,6 +3,7 @@ worldGravity = 0;
 
 ------------------------------------------------------------------------------Player initializing Starts Here ------------------------------------------------------------------------------------------------------------------------------------------------------
 player1Moving = false
+player2Moving = false
 
 player1 = {}
 player1X = 350
@@ -15,6 +16,7 @@ player2X = 500
 player2Y = 500
 player2R = 40
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function love.load()
     wf = require "libraries/windfield"  
@@ -32,7 +34,6 @@ end
 
 function love.update(dt)
     
-
     -- basic player one mvoement
     if love.keyboard.isDown('left')then
         player1:applyForce(-5000,0)
@@ -47,7 +48,7 @@ function love.update(dt)
         player1:applyForce(0,5000)
     end
 
-    -- basic player 2 movement
+    -- basic player two movement
     if love.keyboard.isDown('w')then
         player2:applyForce(0,-5000)
     end
