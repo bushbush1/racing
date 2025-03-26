@@ -48,7 +48,7 @@ function love.update(dt)
         player1:applyForce(0,5000)
     end
 
-    -- basic player 2 movement
+    -- basic player two movement
     if love.keyboard.isDown('w')then
         player2:applyForce(0,-5000)
     end
