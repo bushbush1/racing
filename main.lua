@@ -1,6 +1,5 @@
-
-worldGravity = 500;
-moonGravity = worldGravity/2;
+-- initializing all the variables that maybe needed in this game.
+worldGravity = 0;
 
 --player1Size = 80,80;
 player1 = {}
@@ -14,9 +13,7 @@ function love.load()
     world  = wf.newWorld(0, worldGravity) -- this second pararmeter is the gravity in the world
 
      player1 = world:newRectangleCollider(player1.w,player1.h,80, 80)
-     player2 = world:newRectangleCollider(250,200,100,100)
-     player3 = world:newCircleCollider(250,350,50)
-
+     
      ground = world:newRectangleCollider(50,600,600,100)
      ground:setType('static')
 
