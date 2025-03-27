@@ -21,7 +21,6 @@ player2R = 40
 function love.load()
     wf = require "libraries/windfield"  
     camera = require"libraries/camera"
-
     cameras = {}
     cam1 = camera()
     
