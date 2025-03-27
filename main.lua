@@ -20,6 +20,10 @@ player2R = 40
 
 function love.load()
     wf = require "libraries/windfield"  
+    camera = require"libraries/camera"
+
+    cameras = {}
+    cam1 = camera()
     
     world  = wf.newWorld(0, worldGravity) -- this second pararmeter is the gravity in the world
 
@@ -62,12 +66,14 @@ function love.update(dt)
         player2:applyForce(5000,0)
     end
 
-
+    cam1:lookAt(player1:getX(), player1:getY())
 
     world:update(dt)
 end
 
 function love.draw()
-    world:draw()
+    cam1:attach()
+     world:draw()
+    cam1:detach()
 end
 
